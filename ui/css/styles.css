@@ -535,19 +535,34 @@ section > div {
       padding-top: 20px;
       padding-bottom: 20px; }
       .team.team-mark .illustration > div {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 400px;
+        position: relative;
+        width: 100%; }
+        .team.team-mark .illustration > div svg {
+          display: block; }
+          .team.team-mark .illustration > div svg > path {
+            fill: transparent; }
+          .team.team-mark .illustration > div svg #shape {
+            fill: #205B81; }
+    .team.team-mark .illustration:not(.no-mask) {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .team.team-mark .illustration:not(.no-mask) > div {
         left: -2%;
         margin-right: auto;
         margin-left: auto;
         max-width: 320px;
         position: relative;
         width: 100%; }
-        .team.team-mark .illustration > div img.overlay-mask {
+        .team.team-mark .illustration:not(.no-mask) > div img.overlay-mask {
           display: block;
           height: auto;
           position: relative;
           width: 100%;
           z-index: 2; }
-        .team.team-mark .illustration > div img.photo {
+        .team.team-mark .illustration:not(.no-mask) > div img.photo {
           display: block;
           height: auto;
           position: absolute;
@@ -555,6 +570,28 @@ section > div {
           top: 8%;
           width: 78%;
           z-index: 1; }
+        .team.team-mark .illustration:not(.no-mask) > div .photo {
+          background-color: #ffebea;
+          border-radius: 50%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          height: 76%;
+          position: absolute;
+          right: 9%;
+          top: 11%;
+          width: 69%;
+          z-index: 3; }
+          .team.team-mark .illustration:not(.no-mask) > div .photo svg {
+            border-radius: 50%;
+            height: auto;
+            margin-top: 2%;
+            margin-right: 1%;
+            width: 87%; }
+            .team.team-mark .illustration:not(.no-mask) > div .photo svg > path {
+              fill: transparent; }
+            .team.team-mark .illustration:not(.no-mask) > div .photo svg #shape {
+              fill: #422b45; }
     @media all and (max-width: 640px) {
       .team.team-mark .illustration > div {
         left: -20px;
