@@ -324,6 +324,8 @@ section > div {
   margin-left: auto;
   max-width: 1440px;
   width: 100%; }
+  .big-illustration .illustration img {
+    background-color: #4495D4; }
   .big-illustration .copy p:nth-of-type(1) {
     font-family: 'publicsansextrabold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 1.75em;
@@ -388,6 +390,8 @@ section > div {
       padding-top: 16px; } }
   .big-illustration.value {
     background-color: #ffebea; }
+    .big-illustration.value .illustration img {
+      background-color: #ffebea; }
     .big-illustration.value .illustration {
       padding-bottom: 20px; }
     @media all and (min-width: 1024px) {
@@ -411,10 +415,16 @@ section > div {
       padding-top: 20px; }
     .services > div:nth-of-type(1) {
       background-color: #ed8736; }
+      .services > div:nth-of-type(1) .illustration img {
+        background-color: #ed8736; }
     .services > div:nth-of-type(2) {
       background-color: #d84e60; }
+      .services > div:nth-of-type(2) .illustration img {
+        background-color: #d84e60; }
     .services > div:nth-of-type(3) {
       background-color: #f0cc51; }
+      .services > div:nth-of-type(3) .illustration img {
+        background-color: #f0cc51; }
     .services > div:nth-of-type(1) .copy, .services > div:nth-of-type(2) .copy {
       background-color: rgba(0, 0, 0, 0.075);
       padding-top: 70px;
@@ -485,6 +495,8 @@ section > div {
   margin-left: auto;
   max-width: 1440px;
   width: 100%; }
+  .team .illustration img {
+    background-color: #ffebea; }
   .team .copy {
     padding-top: 70px;
     padding-bottom: 70px; }
