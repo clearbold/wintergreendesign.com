@@ -87,6 +87,26 @@ p {
 
 a {
     color: inherit;
+
+    -webkit-text-decoration-thickness: from-font;
+    -webkit-text-underline-offset: 1px;
+    text-decoration-thickness: from-font;
+    text-underline-offset: 1px;
+
+    transition: .2s all;
+
+    &:hover {
+        -webkit-text-decoration-color: $color-orange;
+        text-decoration-color: $color-orange;
+    }
+}
+.winedirect-feeds a,
+footer a {
+    transition: .2s all;
+    &:hover {
+        -webkit-text-decoration-color: $color-red;
+        text-decoration-color: $color-red;
+    }
 }
 
 h1, h2, h3, p.h3, h4 {
@@ -190,6 +210,10 @@ body {
     justify-content: center;
 }
 .logo {
+    display: block;
+    &:hover {
+        transform: scale(1.125);
+    }
     // background-color: #ddd;
     color: rgba(0, 0, 0, .5);
     height: 68px;
@@ -234,15 +258,17 @@ input, textarea {
 button, .button, input[type=submit] {
     background: white;
     border: 1px solid transparent;
+    border: 0;
     color: $color-red;
     cursor: pointer;
     font-family: 'montserratsemibold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: .05em;
-    line-height: normal;
-    padding-top: 1em;
+    line-height: 1em;
+    // padding-top: 1em;
+    // padding-top: 1px;
     padding-right: 2em;
-    padding-bottom: 1em;
+    // padding-bottom: 1em;
     padding-left: 2em;
     text-decoration: none;
     text-transform: uppercase;
@@ -253,19 +279,33 @@ button, .button, input[type=submit] {
     &::-moz-focus-inner {
       border: 0;
     }
+
+    align-items: center;
+    display: inline-flex;
+    height: 46px;
+    justify-content: center;
 }
 @-moz-document url-prefix() {
     button, .button, input[type=submit] {
-        padding-bottom: .75em;
+        padding-top: 2px;
     }
 }
 nav > button, nav > .button {
     display: none;
     @media all and (min-width: 640px) {
-        display: inline-block;
+        display: inline-flex;
     }
     background-color: $color-red;
     color: white;
+    &:hover {
+        transform: scale(1.125);
+    }
+    &:focus {
+        border: 1px solid rgba(0, 0, 0, 0.025);
+        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125);
+    }
+}
+button {
     &:hover {
         transform: scale(1.125);
     }
@@ -294,7 +334,8 @@ nav > button, nav > .button {
 .masthead {
     @media all and (min-width: 1024px) {
         &.color-hero,
-        &.color-team-mark {
+        &.color-team-mark,
+        &.color-winedirect-integrations {
             .wrapper {
                 background-color: $color-light-orange;
             }
@@ -319,7 +360,8 @@ nav > button, nav > .button {
                 }
             }
         }
-        &.color-value {
+        &.color-value,
+        &.color-feeds {
             .wrapper {
                 background-color: $color-orange;
             }
@@ -340,6 +382,27 @@ nav > button, nav > .button {
                 }
                 &:focus {
                     box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);
+                }
+            }
+        }
+        // .winedirect &,
+        &.color-winedirect {
+            .wrapper {
+                background-color: #c018a2;
+                .logo {
+                    svg {
+                        .text, .leaf, #berry {
+                            fill: white;
+                        }
+                    }
+                }
+                nav > .button {
+                    background-color: white;
+                    color: #c018a2;
+                    &:hover {}
+                    &:focus {
+                        box-shadow: 0px 0px 3px 1px;
+                    }
                 }
             }
         }
@@ -448,6 +511,14 @@ section > div {
                 margin-bottom: .541353383em;
             }
         }
+        ul {
+            list-style: none;
+            margin-top: 2em;
+            padding-left: 2px;
+            li:not(:first-of-type) {
+                margin-top: 1em;
+            }
+        }
     }
     @media all and (max-width: 1023px) {
         .copy {
@@ -503,15 +574,16 @@ section > div {
             flex-wrap: wrap;
             padding-top: 70px;
             padding-bottom: 70px;
+            padding-left: 60px;
         }
         &.hero {
             .copy {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
+                // justify-content: center;
 
                 p {
-                    max-width: 400px;
+                    // max-width: 400px;
                 }
             }
         }
@@ -728,6 +800,232 @@ section > div {
         }
     }
 }
+
+.winedirect-integrations {
+    background-color: $color-yellow;
+    .panel-form {
+        h2 {
+            color: white;
+        }
+        background-color: $color-blue;
+        label {
+            color: white;
+        }
+        & > div {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 600px;
+        }
+    }
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    width: 100%;
+    .copy {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @media all and (max-width: 767px) {
+        .copy {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    & > div {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    @media all and (max-width: 1023px) {
+        .copy {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    @media all and (min-width: 1024px) {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        & > div {
+            &:nth-of-type(1) {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+            &:nth-of-type(2) {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+    }
+    // .button-wrapper {
+    //     display: inline-block;
+    //     margin-top: 1.75em;
+        button {
+            background-color: white;
+            color: $color-blue;
+            display: inline-block;
+            &:hover {
+                transform: scale(1.125);
+            }
+        }
+    //     p {
+    //         font-size: .75em;
+    //         margin-top: 1em;
+    //         text-align: center;
+    //         text-transform: uppercase;
+    //     }
+    // }
+}
+
+.winedirect-feeds {
+    background-color: $color-light-orange;
+    .lockup {
+        h1 {
+            text-align: center;
+            span {
+                color: #c018a2;
+            }
+        }
+        .logos {
+            align-items: center;
+            display: flex;
+            margin-top: 30px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 240px;
+            & > div {
+                flex-basis: 120px;
+                max-width: 120px;
+                svg {
+                    display: block;
+                    margin-right: auto;
+                    margin-left: auto;
+                }
+                .google-logo {
+                    height: 100px;
+                    width: 100px;
+                }
+                .pinterest-logo {
+                    height: 80px;
+                    width: 80px;
+                }
+            }
+        }
+    }
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1440px;
+    width: 100%;
+    .copy {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media all and (max-width: 767px) {
+        .copy {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    }
+    & > div {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    @media all and (max-width: 1023px) {
+        .copy:not(.lockup) {
+            background-color: rgba(0, 0, 0, .075);
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .button-wrapper-outer {
+            text-align: center;
+        }
+    }
+    @media all and (min-width: 1024px) {
+        .copy:not(.lockup) {
+            // background-color: white;
+            // background-color: #c018a2;
+            // background-color: rgba(0, 0, 0, 0.075);
+            // color: white;
+        }
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        & > div {
+            &:nth-of-type(1) {
+                flex-basis: 50%;
+                max-width: 50%;
+                // padding-right: 120px;
+                // padding-left: 10px;
+            }
+            &:nth-of-type(2) {
+                flex-basis: 50%;
+                max-width: 50%;
+                // padding-right: 0;
+                padding-left: 0;
+                // transform: translateX(-120px);
+            }
+        }
+        .lockup {
+            padding-top: 20px;
+        }
+    }
+    @media all and (min-width: 1280px) {
+        .copy:not(.lockup) {
+            // background-color: white;
+            // background-color: #c018a2;
+            // background-color: rgba(0, 0, 0, 0.075);
+            // color: white;
+        }
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        & > div {
+            &:nth-of-type(1) {
+                flex-basis: 50%;
+                max-width: 50%;
+                padding-right: 120px;
+                padding-left: 10px;
+            }
+            &:nth-of-type(2) {
+                flex-basis: 50%;
+                max-width: 50%;
+                padding-right: 0;
+                padding-left: 30px;
+                transform: translateX(-120px);
+            }
+        }
+        .lockup {
+            padding-top: 20px;
+        }
+    }
+    .button-wrapper {
+        display: inline-block;
+        margin-top: 1.75em;
+        .button {
+            // background-color: $color-orange;
+            // background-color: #c018a2;
+            background-color: $color-red;
+            // background-color: white;
+            color: white;
+            // color: #c018a2;
+            // display: inline-block;
+            &:hover {
+                transform: scale(1.125);
+            }
+        }
+        p {
+            font-size: .75em;
+            margin-top: 1em;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+}
+
 .team {
     background-color: $color-light-orange;
     .illustration {
@@ -942,7 +1240,7 @@ section > div {
             label {
                 display: block;
                 font-family: 'publicsansbold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-                margin-bottom: .5em;
+                margin-bottom: .25em;
             }
             input:not([type=submit]),
             textarea {
@@ -969,6 +1267,41 @@ section > div {
         }
     }
 }
+
+form > div:not(:last-of-type) {
+    margin-bottom: 2em;
+}
+form {
+    label {
+        display: block;
+        font-family: 'publicsansbold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.5em;
+        margin-bottom: .25em;
+    }
+    input:not([type=submit]),
+    textarea {
+        color: rgba(0, 0, 0, .85);
+        font-family: inherit;
+        line-height: 1.5em;
+        padding: 1em;
+        width: 100%;
+    }
+    textarea {
+        height: 9.5em;
+    }
+    input[type=submit] {
+        &:hover {
+            transform: scale(1.125);
+        }
+    }
+    .button-wrapper {
+        text-align: center;
+        @media all and (min-width: 600px) {
+            text-align: right;
+        }
+    }
+}
+
 footer {
     padding-top: 80px;
     padding-bottom: 80px;

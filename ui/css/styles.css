@@ -81,7 +81,23 @@ p {
         padding: 40px; } }
 
 a {
-  color: inherit; }
+  color: inherit;
+  -webkit-text-decoration-thickness: from-font;
+  -webkit-text-underline-offset: 1px;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 1px;
+  transition: .2s all; }
+  a:hover {
+    -webkit-text-decoration-color: #ed8736;
+    text-decoration-color: #ed8736; }
+
+.winedirect-feeds a,
+footer a {
+  transition: .2s all; }
+  .winedirect-feeds a:hover,
+  footer a:hover {
+    -webkit-text-decoration-color: #d84e60;
+    text-decoration-color: #d84e60; }
 
 h1, h2, h3, p.h3, h4 {
   font-family: 'publicsansextrabold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -170,12 +186,15 @@ body {
   justify-content: center; }
 
 .logo {
+  display: block;
   color: rgba(0, 0, 0, 0.5);
   height: 68px;
   margin-top: 20px;
   margin-bottom: 20px;
   transition: .2s all;
   width: 270px; }
+  .logo:hover {
+    transform: scale(1.125); }
   .logo svg {
     height: 68px;
     width: 270px; }
@@ -207,19 +226,22 @@ input:focus, textarea:focus {
 button, .button, input[type=submit] {
   background: white;
   border: 1px solid transparent;
+  border: 0;
   color: #d84e60;
   cursor: pointer;
   font-family: 'montserratsemibold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: .05em;
-  line-height: normal;
-  padding-top: 1em;
+  line-height: 1em;
   padding-right: 2em;
-  padding-bottom: 1em;
   padding-left: 2em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: .1s transform linear, .25s background-color linear, .25s color linear; }
+  transition: .1s transform linear, .25s background-color linear, .25s color linear;
+  align-items: center;
+  display: inline-flex;
+  height: 46px;
+  justify-content: center; }
   button:focus, .button:focus, input[type=submit]:focus {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
   button::-moz-focus-inner, .button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
@@ -227,19 +249,25 @@ button, .button, input[type=submit] {
 
 @-moz-document url-prefix() {
   button, .button, input[type=submit] {
-    padding-bottom: .75em; } }
+    padding-top: 2px; } }
 nav > button, nav > .button {
   display: none;
   background-color: #d84e60;
   color: white; }
   @media all and (min-width: 640px) {
     nav > button, nav > .button {
-      display: inline-block; } }
+      display: inline-flex; } }
   nav > button:hover, nav > .button:hover {
     transform: scale(1.125); }
   nav > button:focus, nav > .button:focus {
     border: 1px solid rgba(0, 0, 0, 0.025);
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
+
+button:hover {
+  transform: scale(1.125); }
+button:focus {
+  border: 1px solid rgba(0, 0, 0, 0.025);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
 
 #email-link {
   font-family: 'montserratsemibold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -252,31 +280,40 @@ nav > button, nav > .button {
       display: none; } }
 
 @media all and (min-width: 1024px) {
-  .masthead.color-hero .wrapper, .masthead.color-team-mark .wrapper {
+  .masthead.color-hero .wrapper, .masthead.color-team-mark .wrapper, .masthead.color-winedirect-integrations .wrapper {
     background-color: #ffebea; }
-  .masthead.color-hero .logo svg .text, .masthead.color-hero .logo svg .leaf, .masthead.color-hero .logo svg #berry, .masthead.color-team-mark .logo svg .text, .masthead.color-team-mark .logo svg .leaf, .masthead.color-team-mark .logo svg #berry {
+  .masthead.color-hero .logo svg .text, .masthead.color-hero .logo svg .leaf, .masthead.color-hero .logo svg #berry, .masthead.color-team-mark .logo svg .text, .masthead.color-team-mark .logo svg .leaf, .masthead.color-team-mark .logo svg #berry, .masthead.color-winedirect-integrations .logo svg .text, .masthead.color-winedirect-integrations .logo svg .leaf, .masthead.color-winedirect-integrations .logo svg #berry {
     fill: #205B81; }
-  .masthead.color-hero nav > .button, .masthead.color-team-mark nav > .button {
+  .masthead.color-hero nav > .button, .masthead.color-team-mark nav > .button, .masthead.color-winedirect-integrations nav > .button {
     background-color: white;
     color: #d84e60; }
-    .masthead.color-hero nav > .button:hover, .masthead.color-team-mark nav > .button:hover {
+    .masthead.color-hero nav > .button:hover, .masthead.color-team-mark nav > .button:hover, .masthead.color-winedirect-integrations nav > .button:hover {
       background-color: #4495D4;
       color: #ffebea; }
-    .masthead.color-hero nav > .button:focus, .masthead.color-team-mark nav > .button:focus {
+    .masthead.color-hero nav > .button:focus, .masthead.color-team-mark nav > .button:focus, .masthead.color-winedirect-integrations nav > .button:focus {
       border: 1px solid rgba(0, 0, 0, 0.025);
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
-  .masthead.color-value .wrapper {
+  .masthead.color-value .wrapper, .masthead.color-feeds .wrapper {
     background-color: #ed8736; }
-  .masthead.color-value .logo svg .text, .masthead.color-value .logo svg .leaf, .masthead.color-value .logo svg #berry {
+  .masthead.color-value .logo svg .text, .masthead.color-value .logo svg .leaf, .masthead.color-value .logo svg #berry, .masthead.color-feeds .logo svg .text, .masthead.color-feeds .logo svg .leaf, .masthead.color-feeds .logo svg #berry {
     fill: #ffffff; }
-  .masthead.color-value nav > .button {
+  .masthead.color-value nav > .button, .masthead.color-feeds nav > .button {
     background-color: white;
     color: #d84e60; }
-    .masthead.color-value nav > .button:hover {
+    .masthead.color-value nav > .button:hover, .masthead.color-feeds nav > .button:hover {
       background-color: #ffebea;
       color: #ed8736; }
-    .masthead.color-value nav > .button:focus {
+    .masthead.color-value nav > .button:focus, .masthead.color-feeds nav > .button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
+  .masthead.color-winedirect .wrapper {
+    background-color: #c018a2; }
+    .masthead.color-winedirect .wrapper .logo svg .text, .masthead.color-winedirect .wrapper .logo svg .leaf, .masthead.color-winedirect .wrapper .logo svg #berry {
+      fill: white; }
+    .masthead.color-winedirect .wrapper nav > .button {
+      background-color: white;
+      color: #c018a2; }
+      .masthead.color-winedirect .wrapper nav > .button:focus {
+        box-shadow: 0px 0px 3px 1px; }
   .masthead.color-services .wrapper {
     background-color: #4495D4; }
   .masthead.color-services .logo svg .text, .masthead.color-services .logo svg .leaf, .masthead.color-services .logo svg #berry {
@@ -332,6 +369,12 @@ section > div {
     line-height: 1.25em; }
     .big-illustration .copy p:nth-of-type(1):not(:last-child) {
       margin-bottom: .541353383em; }
+  .big-illustration .copy ul {
+    list-style: none;
+    margin-top: 2em;
+    padding-left: 2px; }
+    .big-illustration .copy ul li:not(:first-of-type) {
+      margin-top: 1em; }
   @media all and (max-width: 1023px) {
     .big-illustration .copy {
       background-color: rgba(0, 0, 0, 0.075);
@@ -376,13 +419,11 @@ section > div {
         display: flex;
         flex-wrap: wrap;
         padding-top: 70px;
-        padding-bottom: 70px; }
+        padding-bottom: 70px;
+        padding-left: 60px; }
       .big-illustration.hero .copy {
         display: flex;
-        flex-direction: row;
-        justify-content: center; }
-        .big-illustration.hero .copy p {
-          max-width: 400px; } }
+        flex-direction: row; } }
   .big-illustration.hero .illustration {
     padding-top: 10px; }
   @media all and (min-width: 1280px) {
@@ -489,6 +530,148 @@ section > div {
   @media all and (min-width: 1024px) {
     .services > div:nth-of-type(1) .copy, .services > div:nth-of-type(2) .copy {
       flex: 1; } } }
+.winedirect-integrations {
+  background-color: #f0cc51;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+  width: 100%; }
+  .winedirect-integrations .panel-form {
+    background-color: #4495D4; }
+    .winedirect-integrations .panel-form h2 {
+      color: white; }
+    .winedirect-integrations .panel-form label {
+      color: white; }
+    .winedirect-integrations .panel-form > div {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 600px; }
+  .winedirect-integrations .copy {
+    padding-top: 120px;
+    padding-bottom: 120px; }
+  @media all and (max-width: 767px) {
+    .winedirect-integrations .copy {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .winedirect-integrations > div:last-of-type {
+    margin-bottom: 0; }
+  @media all and (max-width: 1023px) {
+    .winedirect-integrations .copy {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  @media all and (min-width: 1024px) {
+    .winedirect-integrations {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap; }
+      .winedirect-integrations > div:nth-of-type(1) {
+        flex-basis: 50%;
+        max-width: 50%; }
+      .winedirect-integrations > div:nth-of-type(2) {
+        flex-basis: 50%;
+        max-width: 50%; } }
+  .winedirect-integrations button {
+    background-color: white;
+    color: #4495D4;
+    display: inline-block; }
+    .winedirect-integrations button:hover {
+      transform: scale(1.125); }
+
+.winedirect-feeds {
+  background-color: #ffebea;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+  width: 100%; }
+  .winedirect-feeds .lockup h1 {
+    text-align: center; }
+    .winedirect-feeds .lockup h1 span {
+      color: #c018a2; }
+  .winedirect-feeds .lockup .logos {
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 240px; }
+    .winedirect-feeds .lockup .logos > div {
+      flex-basis: 120px;
+      max-width: 120px; }
+      .winedirect-feeds .lockup .logos > div svg {
+        display: block;
+        margin-right: auto;
+        margin-left: auto; }
+      .winedirect-feeds .lockup .logos > div .google-logo {
+        height: 100px;
+        width: 100px; }
+      .winedirect-feeds .lockup .logos > div .pinterest-logo {
+        height: 80px;
+        width: 80px; }
+  .winedirect-feeds .copy {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  @media all and (max-width: 767px) {
+    .winedirect-feeds .copy {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .winedirect-feeds > div:last-of-type {
+    margin-bottom: 0; }
+  @media all and (max-width: 1023px) {
+    .winedirect-feeds .copy:not(.lockup) {
+      background-color: rgba(0, 0, 0, 0.075);
+      padding-top: 40px;
+      padding-bottom: 40px; }
+    .winedirect-feeds .button-wrapper-outer {
+      text-align: center; } }
+  @media all and (min-width: 1024px) {
+    .winedirect-feeds {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap; }
+      .winedirect-feeds > div:nth-of-type(1) {
+        flex-basis: 50%;
+        max-width: 50%; }
+      .winedirect-feeds > div:nth-of-type(2) {
+        flex-basis: 50%;
+        max-width: 50%;
+        padding-left: 0; }
+      .winedirect-feeds .lockup {
+        padding-top: 20px; } }
+  @media all and (min-width: 1280px) {
+    .winedirect-feeds {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap; }
+      .winedirect-feeds > div:nth-of-type(1) {
+        flex-basis: 50%;
+        max-width: 50%;
+        padding-right: 120px;
+        padding-left: 10px; }
+      .winedirect-feeds > div:nth-of-type(2) {
+        flex-basis: 50%;
+        max-width: 50%;
+        padding-right: 0;
+        padding-left: 30px;
+        transform: translateX(-120px); }
+      .winedirect-feeds .lockup {
+        padding-top: 20px; } }
+  .winedirect-feeds .button-wrapper {
+    display: inline-block;
+    margin-top: 1.75em; }
+    .winedirect-feeds .button-wrapper .button {
+      background-color: #d84e60;
+      color: white; }
+      .winedirect-feeds .button-wrapper .button:hover {
+        transform: scale(1.125); }
+    .winedirect-feeds .button-wrapper p {
+      font-size: .75em;
+      margin-top: 1em;
+      text-align: center;
+      text-transform: uppercase; }
+
 .team {
   background-color: #ffebea;
   margin-right: auto;
@@ -646,7 +829,7 @@ section > div {
     .form .wrapper > div form label {
       display: block;
       font-family: 'publicsansbold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      margin-bottom: .5em; }
+      margin-bottom: .25em; }
     .form .wrapper > div form input:not([type=submit]),
     .form .wrapper > div form textarea {
       color: rgba(0, 0, 0, 0.85);
@@ -663,6 +846,31 @@ section > div {
       @media all and (min-width: 600px) {
         .form .wrapper > div form .button-wrapper {
           text-align: right; } }
+
+form > div:not(:last-of-type) {
+  margin-bottom: 2em; }
+
+form label {
+  display: block;
+  font-family: 'publicsansbold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5em;
+  margin-bottom: .25em; }
+form input:not([type=submit]),
+form textarea {
+  color: rgba(0, 0, 0, 0.85);
+  font-family: inherit;
+  line-height: 1.5em;
+  padding: 1em;
+  width: 100%; }
+form textarea {
+  height: 9.5em; }
+form input[type=submit]:hover {
+  transform: scale(1.125); }
+form .button-wrapper {
+  text-align: center; }
+  @media all and (min-width: 600px) {
+    form .button-wrapper {
+      text-align: right; } }
 
 footer {
   padding-top: 80px;
