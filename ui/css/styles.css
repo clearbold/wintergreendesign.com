@@ -374,6 +374,7 @@ section > div {
     margin-top: 2em;
     padding-left: 2px; }
     .big-illustration .copy ul li:not(:first-of-type) {
+      line-height: 1.5em;
       margin-top: 1em; }
   @media all and (max-width: 1023px) {
     .big-illustration .copy {

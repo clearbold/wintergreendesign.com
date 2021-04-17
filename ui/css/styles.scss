@@ -517,6 +517,7 @@ section > div {
             margin-top: 2em;
             padding-left: 2px;
             li:not(:first-of-type) {
+                line-height: 1.5em;
                 margin-top: 1em;
             }
         }
