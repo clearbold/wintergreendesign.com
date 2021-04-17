@@ -280,17 +280,17 @@ button:focus {
       display: none; } }
 
 @media all and (min-width: 1024px) {
-  .masthead.color-hero .wrapper, .masthead.color-team-mark .wrapper, .masthead.color-winedirect-integrations .wrapper {
+  .masthead.color-hero .wrapper, .masthead.color-team-mark .wrapper {
     background-color: #ffebea; }
-  .masthead.color-hero .logo svg .text, .masthead.color-hero .logo svg .leaf, .masthead.color-hero .logo svg #berry, .masthead.color-team-mark .logo svg .text, .masthead.color-team-mark .logo svg .leaf, .masthead.color-team-mark .logo svg #berry, .masthead.color-winedirect-integrations .logo svg .text, .masthead.color-winedirect-integrations .logo svg .leaf, .masthead.color-winedirect-integrations .logo svg #berry {
+  .masthead.color-hero .logo svg .text, .masthead.color-hero .logo svg .leaf, .masthead.color-hero .logo svg #berry, .masthead.color-team-mark .logo svg .text, .masthead.color-team-mark .logo svg .leaf, .masthead.color-team-mark .logo svg #berry {
     fill: #205B81; }
-  .masthead.color-hero nav > .button, .masthead.color-team-mark nav > .button, .masthead.color-winedirect-integrations nav > .button {
+  .masthead.color-hero nav > .button, .masthead.color-team-mark nav > .button {
     background-color: white;
     color: #d84e60; }
-    .masthead.color-hero nav > .button:hover, .masthead.color-team-mark nav > .button:hover, .masthead.color-winedirect-integrations nav > .button:hover {
+    .masthead.color-hero nav > .button:hover, .masthead.color-team-mark nav > .button:hover {
       background-color: #4495D4;
       color: #ffebea; }
-    .masthead.color-hero nav > .button:focus, .masthead.color-team-mark nav > .button:focus, .masthead.color-winedirect-integrations nav > .button:focus {
+    .masthead.color-hero nav > .button:focus, .masthead.color-team-mark nav > .button:focus {
       border: 1px solid rgba(0, 0, 0, 0.025);
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
   .masthead.color-value .wrapper, .masthead.color-feeds .wrapper {
@@ -314,29 +314,29 @@ button:focus {
       color: #c018a2; }
       .masthead.color-winedirect .wrapper nav > .button:focus {
         box-shadow: 0px 0px 3px 1px; }
-  .masthead.color-services .wrapper {
+  .masthead.color-services .wrapper, .masthead.color-winedirect-feeds .wrapper {
     background-color: #4495D4; }
-  .masthead.color-services .logo svg .text, .masthead.color-services .logo svg .leaf, .masthead.color-services .logo svg #berry {
+  .masthead.color-services .logo svg .text, .masthead.color-services .logo svg .leaf, .masthead.color-services .logo svg #berry, .masthead.color-winedirect-feeds .logo svg .text, .masthead.color-winedirect-feeds .logo svg .leaf, .masthead.color-winedirect-feeds .logo svg #berry {
     fill: #ffffff; }
-  .masthead.color-services nav > .button {
+  .masthead.color-services nav > .button, .masthead.color-winedirect-feeds nav > .button {
     background-color: white;
     color: #d84e60; }
-    .masthead.color-services nav > .button:hover {
+    .masthead.color-services nav > .button:hover, .masthead.color-winedirect-feeds nav > .button:hover {
       background-color: #f0cc51;
       color: #4495D4; }
-    .masthead.color-services nav > .button:focus {
+    .masthead.color-services nav > .button:focus, .masthead.color-winedirect-feeds nav > .button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
-  .masthead.color-team .wrapper {
+  .masthead.color-team .wrapper, .masthead.color-winedirect-integrations .wrapper {
     background-color: #d84e60; }
-  .masthead.color-team .logo svg .text, .masthead.color-team .logo svg .leaf, .masthead.color-team .logo svg #berry {
+  .masthead.color-team .logo svg .text, .masthead.color-team .logo svg .leaf, .masthead.color-team .logo svg #berry, .masthead.color-winedirect-integrations .logo svg .text, .masthead.color-winedirect-integrations .logo svg .leaf, .masthead.color-winedirect-integrations .logo svg #berry {
     fill: #ffffff; }
-  .masthead.color-team nav > .button {
+  .masthead.color-team nav > .button, .masthead.color-winedirect-integrations nav > .button {
     background-color: white;
     color: #d84e60; }
-    .masthead.color-team nav > .button:hover {
+    .masthead.color-team nav > .button:hover, .masthead.color-winedirect-integrations nav > .button:hover {
       background-color: #ffebea;
       color: #d84e60; }
-    .masthead.color-team nav > .button:focus {
+    .masthead.color-team nav > .button:focus, .masthead.color-winedirect-integrations nav > .button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
   .masthead.color-form .wrapper {
     background-color: #f0cc51; }

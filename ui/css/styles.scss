@@ -334,8 +334,7 @@ button {
 .masthead {
     @media all and (min-width: 1024px) {
         &.color-hero,
-        &.color-team-mark,
-        &.color-winedirect-integrations {
+        &.color-team-mark {
             .wrapper {
                 background-color: $color-light-orange;
             }
@@ -406,7 +405,8 @@ button {
                 }
             }
         }
-        &.color-services {
+        &.color-services,
+        &.color-winedirect-feeds {
             .wrapper {
                 background-color: $color-blue;
             }
@@ -430,7 +430,8 @@ button {
                 }
             }
         }
-        &.color-team {
+        &.color-team,
+        &.color-winedirect-integrations {
             .wrapper {
                 background-color: $color-red;
             }
