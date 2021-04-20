@@ -819,17 +819,16 @@ section > div {
         left: -20px;
         max-width: 280px; } }
     @media all and (min-width: 768px) {
-      .team.team-mark .copy {
-        padding-right: 80px; }
       .team.team-mark .illustration {
         padding-top: 30px;
         padding-bottom: 40px; } }
     @media all and (min-width: 1024px) {
-      .team.team-mark .copy {
-        padding-right: 100px; }
       .team.team-mark .illustration {
         padding-top: 70px;
         padding-bottom: 80px; } }
+    @media all and (min-width: 1280px) {
+      .team.team-mark .copy {
+        padding-right: 100px; } }
 
 .form {
   background: #d84e60;

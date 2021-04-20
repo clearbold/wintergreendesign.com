@@ -1254,7 +1254,7 @@ section > div {
         }
         @media all and (min-width: 768px) {
             .copy {
-                padding-right: 80px;
+                // padding-right: 80px;
             }
             .illustration {
                 padding-top: 30px;
@@ -1262,12 +1262,17 @@ section > div {
             }
         }
         @media all and (min-width: 1024px) {
-            .copy {
-                padding-right: 100px;
-            }
+            // .copy {
+            //     padding-right: 100px;
+            // }
             .illustration {
                 padding-top: 70px;
                 padding-bottom: 80px;
+            }
+        }
+        @media all and (min-width: 1280px) {
+            .copy {
+                padding-right: 100px;
             }
         }
     }
