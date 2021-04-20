@@ -118,6 +118,9 @@ h3, .h3 {
     font-size: 1.5em;
     line-height: 1.25em;
     margin-bottom: .666666667em;
+    @media all and (max-width: 1279px) {
+        font-size: 1.5em;
+    }
     @media all and (max-width: 767px) {
         font-size: 1.25em;
     }
@@ -548,6 +551,7 @@ section > div {
         p:nth-of-type(1) {
             font-family: 'publicsansextrabold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             font-size: 1.75em;
+            font-size: 1.5em;
             line-height: 1.25em;
             &:not(:last-child) {
                 margin-bottom: .541353383em;
@@ -560,6 +564,13 @@ section > div {
             li:not(:first-of-type) {
                 line-height: 1.5em;
                 margin-top: 1em;
+            }
+        }
+    }
+    @media all and (max-width: 1279px) {
+        .copy {
+            p:nth-of-type(1) {
+                font-size: 1.5em;
             }
         }
     }
@@ -604,8 +615,8 @@ section > div {
             max-width: 50%;
         }
         .illustration {
-            align-content: flex-start;
-            align-items: flex-start;
+            align-content: flex-end;
+            align-items: flex-end;
             display: flex;
             flex-wrap: wrap;
             background: transparent;
@@ -634,7 +645,7 @@ section > div {
     @media all and (min-width: 1280px) {
         &.hero {
             .copy {
-
+                padding-right: 100px;
             }
         }
     }
@@ -1122,9 +1133,13 @@ section > div {
             p:nth-of-type(1) {
                 font-family: 'publicsansextrabold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
                 font-size: 1.75em;
+                font-size: 1.5em;
                 line-height: 1.25em;
                 &:not(:last-child) {
                     margin-bottom: .541353383em;
+                }
+                @media all and (max-width: 1279px) {
+                    font-size: 1.5em;
                 }
                 @media all and (max-width: 767px) {
                     font-size: 1.25em;
