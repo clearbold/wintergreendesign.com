@@ -279,6 +279,16 @@ button:focus {
     #email-link {
       display: none; } }
 
+@media all and (min-width: 640px) {
+  .winedirect .masthead .wrapper {
+    background-color: #68AD68; }
+  .winedirect .masthead .logo svg .text, .winedirect .masthead .logo svg .leaf, .winedirect .masthead .logo svg #berry {
+    fill: #ffffff; }
+  .winedirect .masthead nav > .button {
+    background-color: white;
+    color: #d84e60; }
+    .winedirect .masthead nav > .button:focus {
+      box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); } }
 @media all and (min-width: 1024px) {
   .masthead.color-hero .wrapper, .masthead.color-team-mark .wrapper {
     background-color: #ffebea; }
@@ -293,15 +303,6 @@ button:focus {
     .masthead.color-hero nav > .button:focus, .masthead.color-team-mark nav > .button:focus {
       border: 1px solid rgba(0, 0, 0, 0.025);
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
-  .winedirect .masthead .wrapper {
-    background-color: #68AD68; }
-  .winedirect .masthead .logo svg .text, .winedirect .masthead .logo svg .leaf, .winedirect .masthead .logo svg #berry {
-    fill: #ffffff; }
-  .winedirect .masthead nav > .button {
-    background-color: white;
-    color: #d84e60; }
-    .winedirect .masthead nav > .button:focus {
-      box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
   .masthead.color-value .wrapper, .masthead.color-feeds .wrapper {
     background-color: #ed8736; }
   .masthead.color-value .logo svg .text, .masthead.color-value .logo svg .leaf, .masthead.color-value .logo svg #berry, .masthead.color-feeds .logo svg .text, .masthead.color-feeds .logo svg .leaf, .masthead.color-feeds .logo svg #berry {
