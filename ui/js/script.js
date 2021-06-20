@@ -72,4 +72,9 @@ function go() {
         e.stopPropagation();
         document.body.classList.add('lightbox-active');
     });
+    document.getElementById('wintergreen-signup').addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.body.classList.add('lightbox-active');
+    });
 }
