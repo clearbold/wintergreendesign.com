@@ -72,6 +72,13 @@ function go() {
         e.stopPropagation();
         document.body.classList.add('lightbox-active');
     });
+    document.getElementById('wintergreen-signup').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.add('lightbox-active');
+        window.setTimeout(function () {
+            document.getElementById('name').focus();
+        }, 300);
+    });
     document.getElementById('wintergreen-signup').addEventListener('touchstart', function(e) {
         e.preventDefault();
         e.stopPropagation();
