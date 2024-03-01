@@ -72,7 +72,7 @@ function go() {
         e.stopPropagation();
         document.body.classList.add('lightbox-active');
     });
-    document.getElementById('wintergreen-signup').addEventListener('click', function(e) {
+    /*document.getElementById('wintergreen-signup').addEventListener('click', function(e) {
         e.preventDefault();
         document.body.classList.add('lightbox-active');
         window.setTimeout(function () {
@@ -83,5 +83,5 @@ function go() {
         e.preventDefault();
         e.stopPropagation();
         document.body.classList.add('lightbox-active');
-    });
+    });*/
 }
