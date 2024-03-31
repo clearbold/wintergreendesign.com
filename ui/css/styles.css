@@ -63,7 +63,11 @@ body {
         max-width: 100%;
         text-align: center; }
 
-header, footer, section, article, nav {
+header,
+footer,
+section,
+article,
+nav {
   display: block; }
 
 p {
@@ -99,19 +103,26 @@ footer a {
     -webkit-text-decoration-color: #d84e60;
     text-decoration-color: #d84e60; }
 
-h1, h2, h3, p.h3, h4 {
+h1,
+h2,
+h3,
+p.h3,
+h4 {
   font-family: 'publicsansextrabold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: normal; }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.5em;
   line-height: 1.25em;
   margin-bottom: .666666667em; }
   @media all and (max-width: 1279px) {
-    h3, .h3 {
+    h3,
+    .h3 {
       font-size: 1.5em; } }
   @media all and (max-width: 767px) {
-    h3, .h3 {
+    h3,
+    .h3 {
       font-size: 1.25em; } }
 
 body {
@@ -183,7 +194,8 @@ body {
       flex-direction: column;
       justify-content: center; } }
 
-.logo, nav {
+.logo,
+nav {
   align-items: center;
   display: flex;
   justify-content: center; }
@@ -212,24 +224,36 @@ body {
       position: relative;
       top: -4px; } }
 
-button, .button, input, textarea {
+button,
+.button,
+input,
+textarea {
   -webkit-appearance: none;
-  border: 0;
   border-radius: 2px;
   box-shadow: none;
   font-size: inherit;
   transition: .125s all; }
-  button:focus, .button:focus, input:focus, textarea:focus {
+  button:focus,
+  .button:focus,
+  input:focus,
+  textarea:focus {
     box-shadow: none;
     outline: none; }
 
-input:focus, textarea:focus {
+input,
+textarea {
+  -webkit-appearance: none;
+  border: 0; }
+
+input:focus,
+textarea:focus {
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
 
-button, .button, input[type=submit] {
+button,
+.button,
+input[type=submit] {
   background: white;
   border: 1px solid transparent;
-  border: 0;
   color: #d84e60;
   cursor: pointer;
   font-family: 'montserratsemibold', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -245,24 +269,34 @@ button, .button, input[type=submit] {
   display: inline-flex;
   height: 46px;
   justify-content: center; }
-  button:focus, .button:focus, input[type=submit]:focus {
+  button:focus,
+  .button:focus,
+  input[type=submit]:focus {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
-  button::-moz-focus-inner, .button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
+  button::-moz-focus-inner,
+  .button::-moz-focus-inner,
+  input[type=submit]::-moz-focus-inner {
     border: 0; }
 
 @-moz-document url-prefix() {
-  button, .button, input[type=submit] {
+  button,
+  .button,
+  input[type=submit] {
     padding-top: 2px; } }
-nav > button, nav > .button {
+nav > button,
+nav > .button {
   display: none;
   background-color: #d84e60;
   color: white; }
   @media all and (min-width: 640px) {
-    nav > button, nav > .button {
+    nav > button,
+    nav > .button {
       display: inline-flex; } }
-  nav > button:hover, nav > .button:hover {
+  nav > button:hover,
+  nav > .button:hover {
     transform: scale(1.125); }
-  nav > button:focus, nav > .button:focus {
+  nav > button:focus,
+  nav > .button:focus {
     border: 1px solid rgba(0, 0, 0, 0.025);
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
 
@@ -285,7 +319,9 @@ button:focus {
 @media all and (min-width: 640px) {
   .winedirect .masthead .wrapper {
     background-color: #68AD68; }
-  .winedirect .masthead .logo svg .text, .winedirect .masthead .logo svg .leaf, .winedirect .masthead .logo svg #berry {
+  .winedirect .masthead .logo svg .text,
+  .winedirect .masthead .logo svg .leaf,
+  .winedirect .masthead .logo svg #berry {
     fill: #ffffff; }
   .winedirect .masthead nav > .button {
     background-color: white;
@@ -295,7 +331,11 @@ button:focus {
 @media all and (min-width: 1024px) {
   .masthead.color-hero .wrapper, .masthead.color-team-mark .wrapper {
     background-color: #ffebea; }
-  .masthead.color-hero .logo svg .text, .masthead.color-hero .logo svg .leaf, .masthead.color-hero .logo svg #berry, .masthead.color-team-mark .logo svg .text, .masthead.color-team-mark .logo svg .leaf, .masthead.color-team-mark .logo svg #berry {
+  .masthead.color-hero .logo svg .text,
+  .masthead.color-hero .logo svg .leaf,
+  .masthead.color-hero .logo svg #berry, .masthead.color-team-mark .logo svg .text,
+  .masthead.color-team-mark .logo svg .leaf,
+  .masthead.color-team-mark .logo svg #berry {
     fill: #205B81; }
   .masthead.color-hero nav > .button, .masthead.color-team-mark nav > .button {
     background-color: white;
@@ -308,7 +348,11 @@ button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3125); }
   .masthead.color-value .wrapper, .masthead.color-feeds .wrapper {
     background-color: #ed8736; }
-  .masthead.color-value .logo svg .text, .masthead.color-value .logo svg .leaf, .masthead.color-value .logo svg #berry, .masthead.color-feeds .logo svg .text, .masthead.color-feeds .logo svg .leaf, .masthead.color-feeds .logo svg #berry {
+  .masthead.color-value .logo svg .text,
+  .masthead.color-value .logo svg .leaf,
+  .masthead.color-value .logo svg #berry, .masthead.color-feeds .logo svg .text,
+  .masthead.color-feeds .logo svg .leaf,
+  .masthead.color-feeds .logo svg #berry {
     fill: #ffffff; }
   .masthead.color-value nav > .button, .masthead.color-feeds nav > .button {
     background-color: white;
@@ -320,7 +364,9 @@ button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
   .masthead.color-winedirect .wrapper {
     background-color: #c018a2; }
-    .masthead.color-winedirect .wrapper .logo svg .text, .masthead.color-winedirect .wrapper .logo svg .leaf, .masthead.color-winedirect .wrapper .logo svg #berry {
+    .masthead.color-winedirect .wrapper .logo svg .text,
+    .masthead.color-winedirect .wrapper .logo svg .leaf,
+    .masthead.color-winedirect .wrapper .logo svg #berry {
       fill: white; }
     .masthead.color-winedirect .wrapper nav > .button {
       background-color: white;
@@ -329,7 +375,11 @@ button:focus {
         box-shadow: 0px 0px 3px 1px; }
   .masthead.color-services .wrapper, .masthead.color-winedirect-feeds .wrapper {
     background-color: #4495D4; }
-  .masthead.color-services .logo svg .text, .masthead.color-services .logo svg .leaf, .masthead.color-services .logo svg #berry, .masthead.color-winedirect-feeds .logo svg .text, .masthead.color-winedirect-feeds .logo svg .leaf, .masthead.color-winedirect-feeds .logo svg #berry {
+  .masthead.color-services .logo svg .text,
+  .masthead.color-services .logo svg .leaf,
+  .masthead.color-services .logo svg #berry, .masthead.color-winedirect-feeds .logo svg .text,
+  .masthead.color-winedirect-feeds .logo svg .leaf,
+  .masthead.color-winedirect-feeds .logo svg #berry {
     fill: #ffffff; }
   .masthead.color-services nav > .button, .masthead.color-winedirect-feeds nav > .button {
     background-color: white;
@@ -341,7 +391,11 @@ button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
   .masthead.color-team .wrapper, .masthead.color-winedirect-integrations .wrapper {
     background-color: #d84e60; }
-  .masthead.color-team .logo svg .text, .masthead.color-team .logo svg .leaf, .masthead.color-team .logo svg #berry, .masthead.color-winedirect-integrations .logo svg .text, .masthead.color-winedirect-integrations .logo svg .leaf, .masthead.color-winedirect-integrations .logo svg #berry {
+  .masthead.color-team .logo svg .text,
+  .masthead.color-team .logo svg .leaf,
+  .masthead.color-team .logo svg #berry, .masthead.color-winedirect-integrations .logo svg .text,
+  .masthead.color-winedirect-integrations .logo svg .leaf,
+  .masthead.color-winedirect-integrations .logo svg #berry {
     fill: #ffffff; }
   .masthead.color-team nav > .button, .masthead.color-winedirect-integrations nav > .button {
     background-color: white;
@@ -353,7 +407,9 @@ button:focus {
       box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.25); }
   .masthead.color-form .wrapper {
     background-color: #f0cc51; }
-  .masthead.color-form .logo svg .text, .masthead.color-form .logo svg .leaf, .masthead.color-form .logo svg #berry {
+  .masthead.color-form .logo svg .text,
+  .masthead.color-form .logo svg .leaf,
+  .masthead.color-form .logo svg #berry {
     fill: #205B81; }
   .masthead.color-form nav > .button {
     background-color: white;
@@ -991,7 +1047,6 @@ footer {
 .lightbox-close {
   background: transparent;
   webkit-appearance: none;
-  border: 0;
   cursor: pointer;
   cursor: hand;
   height: 40px;
